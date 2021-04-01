@@ -21,7 +21,7 @@ jobs:
       - name: Set up the git repository
         uses: actions/checkout@v2
           
-      # Comiles the two tex-files into pdfs
+      # Comiles the three tex-files into pdfs
       - name: Compile the LaTeX documents
         uses: xu-cheng/latex-action@v2
         with: 
@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: Documents
+          tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
