@@ -22,4 +22,4 @@ gs -dSAFER -dBATCH -dNOPAUSE -dNOCACHE -sDEVICE=pdfwrite \
 -dDownsampleMonoImages=true \
 -dDownsampleGrayImages=true \
 -dDownsampleColorImages=true \
--sOutputFile=docs/UD-stadgar.pdf UD-stadgar.pdf
+-sOutputFile=docs/UD-gdpr.pdf UD-gdpr.pdf
