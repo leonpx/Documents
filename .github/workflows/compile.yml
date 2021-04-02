@@ -32,14 +32,14 @@ jobs:
           post_compile:
             "./postscript.sh"
       
-       # Adds the two resulting pdfs to a commit, then pushes that
-         - name: Commit and tag the documents
-           uses: EndBug/add-and-commit@v5.1.0
-           with:
-             add: "docs/UD-stadgar.pdf docs/UD-reglemente.pdf docs/UD-gdpr.pdf --force"
-             author_name: Uppsala Datavetare
-             author_email: dv-ordf@utn.se
-             message: "Automatically generated"
-             tag: "v${{ github.run_number }}"
-           env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Adds the two resulting pdfs to a commit, then pushes that
+      - name: Commit and tag the documents
+        uses: EndBug/add-and-commit@v5.1.0
+        with:
+          add: "docs/UD-stadgar.pdf docs/UD-reglemente.pdf docs/UD-gdpr.pdf --force"
+          author_name: Uppsala Datavetare
+          author_email: dv-ordf@utn.se
+          message: "Automatically generated"
+          tag: "v${{ github.run_number }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
